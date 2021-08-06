@@ -46,4 +46,20 @@ public class HeroTest {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals("Pressure",myHero.getWeakness());
     }
+
+    @Test
+    public void allHeroesAreCorrectlyReturned_int() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        Hero otherHero = new Hero ("paul", 20, "people", "Time");
+        assertEquals(2,Hero.getAllInstances().size());
+
+    }
+
+    @Test
+    public void allHeroesContainsAllHeroesObjects_true()  {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        Hero otherHero = new Hero ("paul", 20, "people", "Time");
+        assertTrue(Hero.getAllInstances().contains(myHero));
+        assertTrue(Hero.getAllInstances().contains(otherHero));
+    }
 }

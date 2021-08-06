@@ -22,4 +22,10 @@ public class HeroTest {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals(23,myHero.getAge());
     }
+
+    @Test
+    public void returnsHeroPowerCorrectly_True()  {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        assertEquals("work",myHero.getPower());
+    }
 }

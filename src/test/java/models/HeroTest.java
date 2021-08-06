@@ -1,7 +1,13 @@
 package models;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class HeroTest {
+import static org.junit.Assert.*;
 
+public class HeroTest {
+    @Test
+    public void instantiatesHeroObjectsCorrectly_true() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        assertTrue(myHero instanceof Hero);
+    }
 }

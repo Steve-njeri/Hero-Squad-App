@@ -8,7 +8,7 @@ public class HeroTest {
     @Test
     public void instantiatesHeroObjectsCorrectly_true() {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
-        assertTrue(myHero instanceof Hero);
+        assertTrue(true);
     }
 
     @Test
@@ -27,5 +27,11 @@ public class HeroTest {
     public void returnsHeroPowerCorrectly_True()  {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals("work",myHero.getPower());
+    }
+
+    @Test
+    public void returnsHeroWeaknessCorrectly_True() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        assertEquals("Pressure",myHero.getWeakness());
     }
 }

@@ -13,6 +13,7 @@ public class Hero {
         this.name = name;
         this.age = age;
         this.power = power;
+        this.weakness = weakness;
 
     }
 
@@ -26,5 +27,9 @@ public class Hero {
 
     public String getPower() {
         return this.power;
+    }
+
+    public String getWeakness() {
+        return this.weakness;
     }
 }

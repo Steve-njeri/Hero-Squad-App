@@ -16,4 +16,10 @@ public class HeroTest {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals("stephen",myHero.getName());
     }
+
+    @Test
+    public void returnsHeroAgeCorrectly_True() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        assertEquals(23,myHero.getAge());
+    }
 }

@@ -17,6 +17,10 @@ public class Hero {
 
     }
 
+    public static void clearAllHero() {
+        instances.clear();
+    }
+
     public String getName() {
         return this.name;
     }

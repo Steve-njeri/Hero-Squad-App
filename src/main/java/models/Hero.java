@@ -9,6 +9,7 @@ public class Hero {
     private String power;
     private String weakness;
     private static ArrayList<Hero> instances = new ArrayList<>();
+    private static int id;
 
     public Hero(String name, int age, String power, String weakness) {
         this.name = name;
@@ -16,7 +17,7 @@ public class Hero {
         this.power = power;
         this.weakness = weakness;
         instances.add(this);
-//        this.id =instances.size();
+        this.id =instances.size();
 
     }
 
@@ -26,6 +27,18 @@ public class Hero {
 
     public static Collection<Hero> getAllInstances() {
         return instances;
+    }
+
+    public static Hero findById(int i) {
+        try {
+            return instances.get(id-1);
+        }catch (IndexOutOfBoundsException exception) {
+            return null;
+        }
+    }
+
+    public static void setId(int id) {
+        Hero.id = id;
     }
 
     public String getName() {

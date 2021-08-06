@@ -10,4 +10,10 @@ public class HeroTest {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertTrue(myHero instanceof Hero);
     }
+
+    @Test
+    public void returnsHeroNameCorrectly_True()  {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        assertEquals("stephen",myHero.getName());
+    }
 }

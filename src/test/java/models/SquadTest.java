@@ -13,7 +13,14 @@ public class SquadTest {
     @Test
     public void instantiatesSquadObjectsWithHeroObjectsCorrectly_true() {
         ArrayList<Hero> hero = new ArrayList<>();
-        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero );
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
         assertEquals (true, mySquad instanceof Squad);
+    }
+
+    @Test
+    public void returnsSquadNameCorrectly_true() {
+        ArrayList<Hero> hero = new ArrayList<>();
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        assertEquals ("Hooters", mySquad.getName());
     }
 }

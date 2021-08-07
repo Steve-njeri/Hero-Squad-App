@@ -63,5 +63,18 @@ public class SquadTest {
         assertTrue(Squad.getSquadInstances().contains(thirdSquad));
     }
 
+    @Test
+    public void findSquadById() throws Exception {
+        ArrayList<Hero> hero = new ArrayList<>();
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
+        Squad secondSquad = new Squad("Geeks", "Java literacy", 5, hero );
+        Squad thirdSquad = new Squad("Gamblers", "Poverty", 8, hero );
+        Squad foundMySquad = Squad.findById(1);
+        Squad foundSecondSquad = Squad.findById(2);
+        Squad foundThirdSquad = Squad.findById(3);
+        assertEquals(mySquad, foundMySquad);
+        assertEquals(secondSquad,foundSecondSquad);
+        assertEquals(thirdSquad , foundThirdSquad);
 
+    }
 }

@@ -39,4 +39,12 @@ public class Squad {
         return squadInstances;
     }
 
+    public static Squad findById(int id) {
+        try {
+            return squadInstances.get(id-1);
+        }catch (IndexOutOfBoundsException exception) {
+            return null;
+        }
+    }
+
 }

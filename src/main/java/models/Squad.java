@@ -38,4 +38,5 @@ public class Squad {
     public static List<Squad> getSquadInstances() {
         return squadInstances;
     }
+
 }

@@ -49,8 +49,19 @@ public class SquadTest {
         Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
         Squad secondSquad = new Squad("Geeks", "Java literacy", 5, hero );
         Squad thirdSquad = new Squad("Gamblers", "Poverty", 8, hero );
+        assertEquals(3, Squad.getSquadInstances().size());
+    }
+
+    @Test
+    public void squadsContainsAllSquadObjects_true(){
+        ArrayList<Hero> hero = new ArrayList<>();
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
+        Squad secondSquad = new Squad("Geeks", "Java literacy", 5, hero );
+        Squad thirdSquad = new Squad("Gamblers", "Poverty", 8, hero );
         assertTrue(Squad.getSquadInstances().contains(mySquad));
         assertTrue(Squad.getSquadInstances().contains(secondSquad));
         assertTrue(Squad.getSquadInstances().contains(thirdSquad));
     }
+
+
 }

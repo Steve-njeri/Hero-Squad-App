@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    width: 100%;
+    padding-top: 25px;
+    padding-left:50px ;
+    z-index: 100;
+}
+
+header img{
+  height: 90px;
+  position: relative;
+}
+
+header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+nav{
+  position: absolute;
+  top: 23px;
+  right: 10%;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: deepskyblue;
+  display: inline-block;
+}
+
+.nav-link:hover{
+    background-color: red;
+    color: black;
+}
+
+.btns{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-top: 5px;
+
+}
+.btns:hover{
+  background: rgb(0, 0, 0);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.24);
+  color: white;
+}
+
+.display-pg{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5vh;
+  min-height: 10vh;
+  color: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.hero-img{
+  position: relative;
+  z-index: 10;
+  width: 40%;
+  left: 0px;
+  margin-top: 5vh;
+  height: 60vh;
+  overflow: hidden;
+  background: url(https://cdn.dribbble.com/users/58530/screenshots/5476801/ch_logo_motion.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  box-shadow: 0 0 20px rgb(24, 44, 13);
+  animation: load1 0.8s linear 1;
+}
+
+.hero-page{
+  width: 40%;
+  height: 30vh;
+  margin-top: 10vh;
+  margin-left: 25px;
+  position: relative;
+  z-index: 10;
+  left: 0px;
+  color: white;
+  padding-top: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.527);
+  text-align: center;
+  animation: load 1s linear 1;
+}

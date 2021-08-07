@@ -1,0 +1,49 @@
+{{#block "header"}}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> {{#block "title"}} hero {{/block}} </title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel='stylesheet' href='/css/app.css'>
+    </head>
+    <body>
+    <header>
+        <a href="/"><img src="/images/Heros-logo.png"></a>
+        <nav>
+            <ul class="items">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/heroes">Hero</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/posts/new">Squad</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+{{/block}}
+<div class="container">
+    <div class="page-header">
+
+    <div class="col-md-12">
+        <!--begin main template-->
+        {{#block "content"}}
+
+        {{/block}}
+    </div>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+    <footer class="footer">
+        <div class="container">
+        </div>
+    </footer>
+    </body>
+    </html>
+{{/block}}

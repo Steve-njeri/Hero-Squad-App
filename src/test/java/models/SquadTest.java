@@ -23,4 +23,11 @@ public class SquadTest {
         Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
         assertEquals ("Hooters", mySquad.getName());
     }
+
+    @Test
+    public void returnsSquadCauseCorrectly_true()  {
+        ArrayList<Hero> hero = new ArrayList<>();
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        assertEquals ("uplifting", mySquad.getCause());
+    }
 }

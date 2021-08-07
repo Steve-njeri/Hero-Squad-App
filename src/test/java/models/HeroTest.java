@@ -25,25 +25,25 @@ public class HeroTest {
     }
 
     @Test
-    public void returnsHeroNameCorrectly_True()  {
+    public void returnsHeroNameCorrectly_String()  {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals("stephen",myHero.getName());
     }
 
     @Test
-    public void returnsHeroAgeCorrectly_True() {
+    public void returnsHeroAgeCorrectly_int() {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals(23,myHero.getAge());
     }
 
     @Test
-    public void returnsHeroPowerCorrectly_True()  {
+    public void returnsHeroPowerCorrectly_String()  {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals("work",myHero.getPower());
     }
 
     @Test
-    public void returnsHeroWeaknessCorrectly_True() {
+    public void returnsHeroWeaknessCorrectly_String()  {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
         assertEquals("Pressure",myHero.getWeakness());
     }
@@ -70,5 +70,7 @@ public class HeroTest {
         Hero otherHero = new Hero ("paul", 20, "people", "Time");
         Hero foundMyHero = Hero.findById(1);
         Hero foundOtherHero = Hero.findById(2);
+//        assertEquals(myHero, foundMyHero);
+//        assertEquals(otherHero, foundOtherHero);
     }
 }

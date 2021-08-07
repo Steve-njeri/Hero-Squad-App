@@ -8,8 +8,8 @@ public class Hero {
     private int age;
     private String power;
     private String weakness;
-    private static ArrayList<Hero> instances = new ArrayList<>();
     private static int id;
+    private static ArrayList<Hero> instances = new ArrayList<>();
 
     public Hero(String name, int age, String power, String weakness) {
         this.name = name;
@@ -25,7 +25,7 @@ public class Hero {
         instances.clear();
     }
 
-    public static Collection<Hero> getAllInstances() {
+    public static ArrayList<Hero> getAllInstances() {
         return instances;
     }
 
@@ -35,10 +35,6 @@ public class Hero {
         }catch (IndexOutOfBoundsException exception) {
             return null;
         }
-    }
-
-    public static void setId(int id) {
-        Hero.id = id;
     }
 
     public String getName() {

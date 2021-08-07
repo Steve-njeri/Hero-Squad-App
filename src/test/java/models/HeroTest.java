@@ -17,6 +17,7 @@ public class HeroTest {
     public void tearDown() throws Exception {
         Hero.clearAllHero();
     }
+
     @Test
     public void instantiatesHeroObjectsCorrectly_true() {
         Hero myHero = new Hero ("stephen", 23, "work", "Pressure");

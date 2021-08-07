@@ -8,40 +8,49 @@ import static org.junit.Assert.*;
 
 public class SquadTest {
 
-    private ArrayList<Hero> Hero;
-
     @Test
     public void instantiatesSquadObjectsWithHeroObjectsCorrectly_true() {
         ArrayList<Hero> hero = new ArrayList<>();
-        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
         assertTrue(true);
     }
 
     @Test
     public void returnsSquadNameCorrectly_String() {
         ArrayList<Hero> hero = new ArrayList<>();
-        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
         assertEquals ("Hooters", mySquad.getName());
     }
 
     @Test
     public void returnsSquadCauseCorrectly_String()  {
         ArrayList<Hero> hero = new ArrayList<>();
-        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
         assertEquals ("uplifting", mySquad.getCause());
     }
 
     @Test
     public void returnsSquadSizeCorrectly_int()  {
         ArrayList<Hero> hero = new ArrayList<>();
-        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
         assertEquals (10, mySquad.getSize());
     }
 
     @Test
     public void returnsSquadHeroesCorrectly_ArrayList() {
         ArrayList<Hero> hero = new ArrayList<>();
-        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
-        assertEquals (Hero, mySquad.getHero());
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
+        assertEquals (hero, mySquad.getHero());
+    }
+
+    @Test
+    public void returnsAllSquadInstancesCorrectly_int() {
+        ArrayList<Hero> hero = new ArrayList<>();
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, hero);
+        Squad secondSquad = new Squad("Geeks", "Java literacy", 5, hero );
+        Squad thirdSquad = new Squad("Gamblers", "Poverty", 8, hero );
+        assertTrue(Squad.getSquadInstances().contains(mySquad));
+        assertTrue(Squad.getSquadInstances().contains(secondSquad));
+        assertTrue(Squad.getSquadInstances().contains(thirdSquad));
     }
 }

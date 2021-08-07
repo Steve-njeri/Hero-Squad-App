@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Squad {
@@ -15,6 +16,7 @@ public class Squad {
         this.cause = cause;
         this.maxSize = size;
         this.hero = hero;
+        squadInstances.add(this);
     }
 
     public String getName() {
@@ -31,5 +33,9 @@ public class Squad {
 
     public ArrayList<Hero>  getHero() {
         return this.hero;
+    }
+
+    public static List<Squad> getSquadInstances() {
+        return squadInstances;
     }
 }

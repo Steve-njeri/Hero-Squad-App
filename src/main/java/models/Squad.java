@@ -13,6 +13,7 @@ public class Squad {
     public Squad(String name, String cause, int size, ArrayList<Hero> hero) {
         this.name = name;
         this.cause = cause;
+        this.maxSize = size;
     }
 
     public String getName() {
@@ -21,5 +22,9 @@ public class Squad {
 
     public String getCause() {
         return this.cause;
+    }
+
+    public int getSize() {
+        return this.maxSize;
     }
 }

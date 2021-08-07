@@ -14,27 +14,34 @@ public class SquadTest {
     public void instantiatesSquadObjectsWithHeroObjectsCorrectly_true() {
         ArrayList<Hero> hero = new ArrayList<>();
         Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
-        assertEquals (true, mySquad instanceof Squad);
+        assertTrue(true);
     }
 
     @Test
-    public void returnsSquadNameCorrectly_true() {
+    public void returnsSquadNameCorrectly_String() {
         ArrayList<Hero> hero = new ArrayList<>();
         Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
         assertEquals ("Hooters", mySquad.getName());
     }
 
     @Test
-    public void returnsSquadCauseCorrectly_true()  {
+    public void returnsSquadCauseCorrectly_String()  {
         ArrayList<Hero> hero = new ArrayList<>();
         Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
         assertEquals ("uplifting", mySquad.getCause());
     }
 
     @Test
-    public void returnsSquadSizeCorrectly_true()  {
+    public void returnsSquadSizeCorrectly_int()  {
         ArrayList<Hero> hero = new ArrayList<>();
         Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
         assertEquals (10, mySquad.getSize());
+    }
+
+    @Test
+    public void returnsSquadHeroesCorrectly_ArrayList() {
+        ArrayList<Hero> hero = new ArrayList<>();
+        Squad mySquad = new Squad ("Hooters", "uplifting", 10, Hero);
+        assertEquals (Hero, mySquad.getHero());
     }
 }

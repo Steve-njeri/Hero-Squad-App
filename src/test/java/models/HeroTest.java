@@ -70,8 +70,8 @@ public class HeroTest {
         Hero otherHero = new Hero ("paul", 20, "people", "Time");
         Hero foundMyHero = Hero.findById(1);
         Hero foundOtherHero = Hero.findById(2);
-//        assertEquals(myHero, foundMyHero);
-//        assertEquals(otherHero, foundOtherHero);
+        assertEquals(myHero, foundMyHero);
+        assertEquals(otherHero, foundOtherHero);
     }
 
     @Test

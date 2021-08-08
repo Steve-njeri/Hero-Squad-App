@@ -9,6 +9,7 @@ public class Hero {
     private String weakness;
     private static int id;
     private static ArrayList<Hero> instances = new ArrayList<>();
+    private boolean squadMember;
 
     public Hero(String name, int age, String power, String weakness) {
         this.name = name;
@@ -64,8 +65,12 @@ public class Hero {
         return id;
     }
 
-    public void isSquadMember() {
-        instances.clear();
+    public boolean isSquadMember() {
+        return squadMember;
+    }
+
+    public void updateHeroStatus(boolean squadMember){
+        this.squadMember=squadMember;
     }
 
 }

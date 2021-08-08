@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    <h2>CURRENT HEROES</h2>
+    <div class="container">
+    {{#each hero}}
+        <div class="hero-item">
+            <div class="card-body">
+                <img src="https://icon-library.com/images/380874-200_52458.png" alt="">
+                <h5 class="card-title">{{name}}</h5>
+                <hr>
+                <ul class="card-text">
+                    <li>Age: {{age}}</li>
+                    <li>Power: {{power}}</li>
+                    <li>Weakness: {{weakness}}</li>
+                    <li>Created on:</li>
+                </ul>
+                <a href="/heroes/{{id}}/delete"><button class="btn-info">Delete Hero</button></a>
+            </div>
+        </div>
+
+    {{/each}}
+    </div>
+
+{{/partial}}
+
+{{> layout.hbs}}

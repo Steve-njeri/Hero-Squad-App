@@ -56,7 +56,16 @@ public class Hero {
         return this.weakness;
     }
 
-//    public void isSquadMember() {
-//        instances.clear();
-//    }
+    public void deleteHero() {
+        instances.remove(id-1);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void isSquadMember() {
+        instances.clear();
+    }
+
 }

@@ -74,9 +74,27 @@ public class HeroTest {
 //        assertEquals(otherHero, foundOtherHero);
     }
 
-//    @Test
-//    public void checkIfNewlyCreatedHeroIsSquadMember_false() {
-//        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
-//        assertEquals(false, myHero.isSquadMember());
-//    }
+    @Test
+    public void checkIfNewlyCreatedHeroIsSquadMember_false() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        assertEquals(false, myHero.isSquadMember());
+    }
+
+
+    @Test
+    public void deletesSpecifiedHero() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        Hero otherHero = new Hero ("paul", 20, "people", "Time");
+        otherHero.deleteHero();
+        assertEquals(1, Hero.getAllInstances().size());
+        assertEquals(Hero.getAllInstances().get(0).getId(), 2);
+    }
+
+    @Test
+    public void deletesAllHeroes() {
+        Hero myHero = new Hero ("stephen", 23, "work", "Pressure");
+        Hero otherHero = new Hero ("paul", 20, "people", "Time");
+        Hero.clearAllHeroes();
+        assertEquals(0, Hero.getAllInstances().size());
+    }
 }

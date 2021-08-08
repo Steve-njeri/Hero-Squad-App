@@ -45,5 +45,10 @@ public class App {
             model.put("hero",Hero.getAllInstances());
             return new ModelAndView(model,"hero.hbs");
         },new HandlebarsTemplateEngine());
+
+        get("/squad-form", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "squad-form.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }

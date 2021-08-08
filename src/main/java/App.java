@@ -1,4 +1,5 @@
 import models.Hero;
+import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import static spark.Spark.*;
@@ -63,5 +64,12 @@ public class App {
             model.put("hero",Hero.getAllInstances());
             return new ModelAndView(model,"squad-form.hbs");
         }, new HandlebarsTemplateEngine());
+
+        get("/squad", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("squad", Squad.getSquadInstances());
+            return new ModelAndView(model, "squad.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }

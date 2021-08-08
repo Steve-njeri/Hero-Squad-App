@@ -1,7 +1,6 @@
 package models;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Hero {
     private String name;
@@ -37,6 +36,10 @@ public class Hero {
         }
     }
 
+    public static void clearAllHeroes() {
+        instances.clear();
+    }
+
     public String getName() {
         return this.name;
     }
@@ -52,4 +55,8 @@ public class Hero {
     public String getWeakness() {
         return this.weakness;
     }
+
+//    public void isSquadMember() {
+//        instances.clear();
+//    }
 }

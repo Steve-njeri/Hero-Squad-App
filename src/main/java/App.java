@@ -97,7 +97,7 @@ public class App {
         get("/squad", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("squad", Squad.getSquadInstances());
-            return new ModelAndView(model, "squads.hbs");
+            return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
     }

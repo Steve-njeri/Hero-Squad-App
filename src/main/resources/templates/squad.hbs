@@ -1,6 +1,6 @@
 {{#partial "content"}}
     <h2>CURRENT SQUADS</h2>
-    <a  id="btns" class="btns btn-primary" href="/squad-form" >Create Squad</a>
+    <a  id="btns" class="btns btn-primary" href="/squads/new" >Create Squad</a>
     <a id="btns" href="/squad/delete" class="btns btn-success">Delete All Squad</a>
     <div class="container">
         {{#each squad}}
@@ -14,7 +14,7 @@
                         <li>Maximum heroes: {{maxSize}}</li>
                         <li>Current heroes: {{maxSize}}</li>
                     </ul>
-                    <a href="/squads/{{id}}"><button class="btns btn-info">View Squad Heroes</button></a>
+                    <a href="/squad/:id"><button class="btns btn-info">View Squad Heroes</button></a>
                 </div>
             </div>
 

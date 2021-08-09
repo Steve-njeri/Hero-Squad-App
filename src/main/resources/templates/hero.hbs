@@ -1,6 +1,7 @@
 {{#partial "content"}}
     <h2>CURRENT HEROES</h2>
-    <p> <a class="btns" href="/hero-form" >Create Another Hero</a></p>
+    <a id="btns" class="btns btn-primary" href="/hero-form" >Create Another Hero</a>
+    <a id="btns" href="/heroes/delete" class="btns btn-danger">Delete All Heroes</a>
     <div class="container">
     {{#each hero}}
         <div class="heroes-item">
@@ -12,8 +13,9 @@
                     <li>Age: {{age}}</li>
                     <li>Power: {{power}}</li>
                     <li>Weakness: {{weakness}}</li>
+                    <li>Id: {{ id }}</li>
                 </ul>
-                <i class="bi bi-trash"></i><a href="/heroes/{{id}}/delete"><button class="btn-info">Delete Hero</button></a>
+                <i class="bi bi-trash"></i><a href="/heroes/delete"><button class="btns btn-info">Delete Hero</button></a>
             </div>
         </div>
 

@@ -151,3 +151,20 @@ a{
   padding: 20px;
   margin-left: 25%;
 }
+
+.success{
+  position: absolute;
+  padding: 5px;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.5);
+  width: 70%;
+  min-height: 100px;
+  margin-top: 20vh;
+  transform: all 2s ease;
+  text-align: center;
+  animation: successColor 1s linear 1;
+}
+
+#btns{
+    margin-left: 80px !important;
+}

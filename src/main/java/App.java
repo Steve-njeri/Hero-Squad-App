@@ -65,7 +65,7 @@ public class App {
             return new ModelAndView(model,"squad-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/squad", (request, response) -> {
+        get("/squads", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("squad", Squad.getSquadInstances());
             return new ModelAndView(model, "squad.hbs");
@@ -91,7 +91,7 @@ public class App {
             Squad newSquad= new Squad(name,cause,maxSize,hero);
             model.put("hero",Hero.getAllInstances());
             model.put("squad", newSquad.getHero());
-            return new ModelAndView(model, "squad-form.hbs");
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/squad", (request, response) -> {

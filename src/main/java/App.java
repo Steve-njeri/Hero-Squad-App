@@ -100,5 +100,12 @@ public class App {
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/squad/delete",(request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            Squad.clearAllSquads();
+            model.put("squad ",Squad.getSquadInstances());
+            return new ModelAndView(model,"squad.hbs");
+        },new HandlebarsTemplateEngine());
+
     }
 }

@@ -103,9 +103,25 @@ public class App {
         get("/squad/delete",(request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             Squad.clearAllSquads();
+            ArrayList<Hero> hero = Hero.getAllInstances();
+            for(int i = 0; i<hero.size(); i++){
+                hero.get(i).updateHeroStatus(false);
+            }
             model.put("squad ",Squad.getSquadInstances());
             return new ModelAndView(model,"squad.hbs");
         },new HandlebarsTemplateEngine());
+
+        get("/squad/:id",(request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfSquadToFind=Integer.parseInt(request.params(":id"));
+            Squad foundSquad=Squad.findById(idOfSquadToFind);
+            model.put("squad",foundSquad);
+            ArrayList<Squad> squads= (ArrayList<Squad>) Squad.getSquadInstances();
+            model.put("squad",squads);
+            return new ModelAndView(model,"squad.hbs");
+        },new HandlebarsTemplateEngine());
+
+
 
     }
 }

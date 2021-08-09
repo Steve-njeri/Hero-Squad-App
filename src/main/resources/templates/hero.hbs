@@ -1,24 +1,23 @@
 {{#partial "content"}}
-    <h2>CURRENT SQUADS</h2>
+    <h2>CURRENT HEROES</h2>
+    <p> <a class="btns" href="/hero-form" >Create Another Hero</a></p>
     <div class="container">
     {{#each hero}}
-        <div class="squad-item">
+        <div class="heroes-item">
             <div class="card-body">
-                <img src="https://icon-library.com/images/380874-200_52458.png" alt="">
+                <i class="bi bi-pin-angle-fill"></i>
                 <h5 class="card-title">{{name}}</h5>
                 <hr>
                 <ul class="card-text">
                     <li>Age: {{age}}</li>
                     <li>Power: {{power}}</li>
                     <li>Weakness: {{weakness}}</li>
-                    <li>Created on:</li>
                 </ul>
-                <a href="/heroes/{{id}}/delete"><button class="btn-info">Delete Hero</button></a>
+                <i class="bi bi-trash"></i><a href="/heroes/{{id}}/delete"><button class="btn-info">Delete Hero</button></a>
             </div>
         </div>
 
     {{/each}}
-        <a href="/squads/delete"><button class="btn-info" id="delete">Delete All Squads</button></a>
     </div>
 
 {{/partial}}

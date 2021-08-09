@@ -1,11 +1,7 @@
-{{#partial "title" }}
-
-    <h2>CREATE A NEW SQUAD</h2>
-
-{{/partial}}
-
 {{#partial "content"}}
-    <form action="/squad" method="post">
+    <h2>CREATE A NEW SQUAD</h2>
+    <hr>
+    <form class="display-form" action="/squad" method="post">
         <div class="form-group">
             <label for="squadName">Name</label>
             <input type="text" class="form-control" name="squadName" id="squadName" placeholder="Name of the squad" required>
@@ -20,11 +16,8 @@
             <label for="squadSize">Size Limit</label>
             <input type="number" class="form-control" name="squadSize" id="squadSize" placeholder="How many heroes should be in this squad?" required>
         </div>
-
-        <div class="form-group">
-            <label for="squadHeroes">Available Heroes</label>
-        </div>
-        <button type="submit" class="btn btn-info my-2 my-sm-0">Create Squad</button>
+        <br>
+        <button type="submit" class="btn btn-danger my-2 my-sm-0 mt-2">Create Squad</button>
     </form>
 
 {{/partial}}

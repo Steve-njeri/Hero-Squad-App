@@ -1,12 +1,7 @@
-{{#partial "title" }}
-
-    <h2>CREATE A NEW HERO</h2>
-
-{{/partial}}
-
 {{#partial "content"}}
-
-    <form action="/heroes" method="post">
+    <h2>CREATE A NEW HERO</h2>
+    <hr>
+    <form class="display-form" action="/heroes" method="post">
         <div class="form-group">
             <label for="heroName">Name</label>
             <input type="text" class="form-control" name="heroName" id="heroName" placeholder="Name of the hero" required>
@@ -26,8 +21,8 @@
             <label for="heroWeakness">Weakness</label>
             <input type="text" class="form-control" name="heroWeakness" id="heroWeakness" placeholder="Weakness of the hero" required>
         </div>
-
-        <button type="submit" class="btn btn-info my-2 my-sm-0">Create Hero</button>
+        <br>
+        <button type="submit" class="btn btn-danger my-2 my-sm-0 mt-2">Create Hero</button>
     </form>
 
 

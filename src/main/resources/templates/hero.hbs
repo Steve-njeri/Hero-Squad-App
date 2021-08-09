@@ -1,8 +1,8 @@
 {{#partial "content"}}
-    <h2>CURRENT HEROES</h2>
+    <h2>CURRENT SQUADS</h2>
     <div class="container">
     {{#each hero}}
-        <div class="hero-item">
+        <div class="squad-item">
             <div class="card-body">
                 <img src="https://icon-library.com/images/380874-200_52458.png" alt="">
                 <h5 class="card-title">{{name}}</h5>
@@ -18,7 +18,7 @@
         </div>
 
     {{/each}}
-        <a href="/heroes/delete"><button class="btn-info">Delete All Heroes</button></a>
+        <a href="/squads/delete"><button class="btn-info" id="delete">Delete All Squads</button></a>
     </div>
 
 {{/partial}}

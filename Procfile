@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.stephen.hero-squad-app
+web: ./build/install/Heroes-sq/bin/Heroes-sq

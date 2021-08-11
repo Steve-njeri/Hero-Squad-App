@@ -1,0 +1,27 @@
+{{#partial "content"}}
+    <h2>CURRENT SQUADS</h2>
+    <a  id="btns" class="btns btn-primary" href="/squads/new" >Create Squad</a>
+    <a id="btns" href="/squad/delete" class="btns btn-success">Delete All Squad</a>
+    <div class="container">
+        {{#each squad}}
+            <div class="hero-item">
+                <div class="card-body">
+                    <i class="bi bi-layers"></i>
+                    <h5 class="card-title">{{name}}</h5>
+                    <hr>
+                    <ul class="card-text">
+                        <li>Cause: {{cause}}</li>
+                        <li>Maximum heroes: {{maxSize}}</li>
+                        <li>Current heroes: {{maxSize}}</li>
+                    </ul>
+                    <a href="/squad/:id"><button class="btns btn-info">View Squad Heroes</button></a>
+                </div>
+            </div>
+
+        {{/each}}
+
+    </div>
+
+{{/partial}}
+
+{{> layout.hbs}}

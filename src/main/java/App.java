@@ -9,7 +9,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class App {
-    public static <hero> void main(String[] args) {
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
+
+    public static void main(String[] args) {
+        port(getHerokuAssignedPort());
         staticFileLocation("/public");
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -108,16 +117,6 @@ public class App {
                 hero.get(i).updateHeroStatus(false);
             }
             model.put("squad ",Squad.getSquadInstances());
-            return new ModelAndView(model,"squad.hbs");
-        },new HandlebarsTemplateEngine());
-
-        get("/squad/:id",(request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            int idOfSquadToFind=Integer.parseInt(request.params(":id"));
-            Squad foundSquad=Squad.findById(idOfSquadToFind);
-            model.put("squad",foundSquad);
-            ArrayList<Squad> squads= (ArrayList<Squad>) Squad.getSquadInstances();
-            model.put("squad",squads);
             return new ModelAndView(model,"squad.hbs");
         },new HandlebarsTemplateEngine());
 

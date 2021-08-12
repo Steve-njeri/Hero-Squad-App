@@ -1,1 +1,0 @@
-web: ./build/install/Heroes-sq/bin/Heroes-sq
